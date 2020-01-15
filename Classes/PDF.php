@@ -13,6 +13,7 @@ namespace ByteDigital\PDFGenerator\Classes;
 use Illuminate\Support\Facades\View;
 use Dompdf\Options;
 use Dompdf\Dompdf;
+use ByteDigital\PDFGenerator\Classes\Generator;
 
 /**
  * This is the PDF class.
@@ -26,12 +27,12 @@ class PDF
      *
      * @method generate
      *
-     * @param ByteDigital\PDFGenerator\Classes\PDFGenerator $invoice
+     * @param ByteDigital\PDFGenerator\Classes\Generator $invoice
      * @param string                              $template
      *
      * @return Dompdf\Dompdf
      */
-    public static function generate(PDFGenerator $data, $template = 'default')
+    public static function generate(Generator $data, $template = 'default')
     {
         $template = strtolower($template);
 

@@ -244,7 +244,7 @@ Adds an item to the invoice.
 
 - \$name **string**
 - \$price **integer**
-- \$ammount **integer**
+- \$amount **integer**
 - \$id **string**
 
 ### popItem

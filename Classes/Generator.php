@@ -223,7 +223,7 @@ class Generator
      *
      * @param string $name
      * @param int    $price
-     * @param int    $ammount
+     * @param int    $amount
      * @param string $id
      * @param string $imageUrl
      *
@@ -296,7 +296,7 @@ class Generator
     private function subTotalPrice()
     {
         return $this->items->sum(function ($item) {
-            return bcmul($item['price'], $item['ammount'], $this->decimals);
+            return bcmul($item['price'], $item['amount'], $this->decimals);
         });
     }
 

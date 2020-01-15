@@ -225,7 +225,7 @@ trait Setters
         return $this;
     }
 
-    public function custom_data()
+    public function custom_data($custom_data)
     {
         $this->custom_data = $custom_data;
         return $this;

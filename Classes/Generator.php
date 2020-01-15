@@ -157,7 +157,7 @@ class Generator
      *
      * @var Illuminate\Support\Collection
      */
-    public $custom_data = [];
+    public $custom_data;
 
     /**
      * Create a new invoice instance.

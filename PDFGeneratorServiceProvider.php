@@ -8,12 +8,12 @@
  * file that was distributed with this source code.
  */
 
-namespace ByteDigital123\PDFGenerator;
+namespace ByteDigital\PDFGenerator;
 
 use Illuminate\Support\ServiceProvider;
 
 /**
- * This is the InvoicesServiceProvider class.
+ * This is the PDFGeneratorServiceProvider class.
  *
  * @author Chris Mills <chris@byte-digital.com>
  */

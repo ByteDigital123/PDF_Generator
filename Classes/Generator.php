@@ -252,7 +252,7 @@ class Generator
      */
     public function addCustomData(array $data)
     {
-        $this->custom_data->push($data);
+        $this->custom_data->push(Collection::make($data));
 
         return $this;
     }

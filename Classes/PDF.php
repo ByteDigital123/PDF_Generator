@@ -26,12 +26,12 @@ class PDF
      *
      * @method generate
      *
-     * @param ByteDigital\PDFGenerator\Classes\Invoice $invoice
+     * @param ByteDigital\PDFGenerator\Classes\PDFGenerator $invoice
      * @param string                              $template
      *
      * @return Dompdf\Dompdf
      */
-    public static function generate(Invoice $invoice, $template = 'default')
+    public static function generate(PDFGenerator $data, $template = 'default')
     {
         $template = strtolower($template);
 
@@ -54,7 +54,7 @@ class PDF
 
         $GLOBALS['with_pagination'] = $invoice->with_pagination;
 
-        $pdf->loadHtml(View::make('invoices::' . $template, ['invoice' => $invoice]));
+        $pdf->loadHtml(View::make('pdf_generator::' . $template, ['data' => $data]));
         $pdf->render();
 
         return $pdf;

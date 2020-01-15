@@ -53,7 +53,7 @@ class PDF
 
         $pdf->setHttpContext($context);
 
-        $GLOBALS['with_pagination'] = $invoice->with_pagination;
+        $GLOBALS['with_pagination'] = $data->with_pagination;
 
         $pdf->loadHtml(View::make('pdf_generator::' . $template, ['data' => $data]));
         $pdf->render();

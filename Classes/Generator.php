@@ -10,11 +10,11 @@
 
 namespace Bytedigital123\PDFGenerator\Classes;
 
-use Bytedigital123\PDFGenerator\Classes\PDF;
-use Bytedigital123\PDFGenerator\Traits\Setters;
-use Carbon\Carbon;
-use Illuminate\Support\Collection;
 use Storage;
+use Illuminate\Support\Collection;
+use Carbon\Carbon;
+use Bytedigital123\PDFGenerator\Traits\Setters;
+use Bytedigital123\PDFGenerator\Classes\PDF;
 
 /**
  * This is the Invoice class.

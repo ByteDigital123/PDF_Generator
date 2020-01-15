@@ -10,8 +10,8 @@
 
 namespace Bytedigital123\PDFGenerator\Traits;
 
-use Carbon\Carbon;
 use Illuminate\Support\Collection;
+use Carbon\Carbon;
 
 /**
  * This is the Setters trait.
@@ -222,6 +222,12 @@ trait Setters
     public function duplicate_header($duplicate_header)
     {
         $this->duplicate_header = $duplicate_header;
+        return $this;
+    }
+
+    public function custom_data()
+    {
+        $this->custom_data = $custom_data;
         return $this;
     }
 

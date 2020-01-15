@@ -10,10 +10,11 @@
 
 namespace ByteDigital\PDFGenerator\Classes;
 
-use ByteDigital\PDFGenerator\Traits\Setters;
-use Carbon\Carbon;
-use Illuminate\Support\Collection;
 use Storage;
+use Illuminate\Support\Collection;
+use Carbon\Carbon;
+use ByteDigital\PDFGenerator\Traits\Setters;
+use ByteDigital\PDFGenerator\Classes\PDF;
 
 /**
  * This is the Invoice class.
@@ -151,6 +152,14 @@ class Generator
     private $pdf;
 
     /**
+     * Custom data to display
+     * in the view
+     *
+     * @var Illuminate\Support\Collection
+     */
+    public $custom_data = [];
+
+    /**
      * Create a new invoice instance.
      *
      * @method __construct
@@ -162,6 +171,7 @@ class Generator
         $this->name = $name;
         $this->template = 'default';
         $this->items = Collection::make([]);
+        $this->custom_data = Collection::make([]);
         $this->currency = config('pdf_generator.currency');
         $this->decimals = config('pdf_generator.decimals');
         $this->logo = config('pdf_generator.logo');
@@ -219,16 +229,29 @@ class Generator
      *
      * @return self
      */
-    public function addItem($name, $price, $ammount = 1, $id = '-', $imageUrl = null)
+    public function addItem($name, $price, $amount = 1, $id = '-', $imageUrl = null)
     {
         $this->items->push(Collection::make([
             'name' => $name,
             'price' => $price,
             'ammount' => $ammount,
-            'totalPrice' => number_format(bcmul($price, $ammount, $this->decimals), $this->decimals),
+            'totalPrice' => number_format(bcmul($price, $amount, $this->decimals), $this->decimals),
             'id' => $id,
             'imageUrl' => $imageUrl,
         ]));
+
+        return $this;
+    }
+
+    /**
+     * add custom data to the array
+     *
+     * @param array $data
+     * @return self
+     */
+    public function addCustomData(array $data)
+    {
+        $this->custom_data->push($data);
 
         return $this;
     }

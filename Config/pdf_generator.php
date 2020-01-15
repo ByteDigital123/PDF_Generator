@@ -11,7 +11,7 @@ return [
     | You can change it on each invoice individually.
      */
 
-    'currency' => 'EUR',
+    'currency' => 'GBP',
 
     /*
     |--------------------------------------------------------------------------
@@ -56,13 +56,12 @@ return [
      */
 
     'business_details' => [
-        'name' => 'My Company',
-        'id' => '1234567890',
+        'name' => 'Paddy`s Pub',
         'phone' => '+34 123 456 789',
-        'location' => 'Main Street 1st',
-        'zip' => '08241',
-        'city' => 'Barcelona',
-        'country' => 'Spain',
+        'address' => 'New Street',
+        'postcode' => 'SK2 5YH',
+        'city' => 'Manchester',
+        'country' => 'United Kingdom',
     ],
 
     /*

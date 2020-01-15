@@ -28,7 +28,7 @@ class PDF
      * @method generate
      *
      * @param ByteDigital\PDFGenerator\Classes\Generator $invoice
-     * @param string                              $template
+     * @param string $template
      *
      * @return Dompdf\Dompdf
      */

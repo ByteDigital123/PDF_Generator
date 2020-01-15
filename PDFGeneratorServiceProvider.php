@@ -26,12 +26,12 @@ class PDFGeneratorServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/Templates', 'invoices');
+        $this->loadViewsFrom(__DIR__ . '/Templates', 'pdf_views');
 
         $this->publishes([
-            __DIR__ . '/Templates' => resource_path('views/vendor/invoices'),
-            __DIR__ . '/Config/invoices.php' => config_path('invoices.php'),
-        ], 'invoices');
+            __DIR__ . '/Templates' => resource_path('views/vendor/pdf_views'),
+            __DIR__ . '/Config/pdf_generator.php' => config_path('pdf_generator.php'),
+        ], 'pdf_generator');
     }
 
     /**
@@ -42,7 +42,7 @@ class PDFGeneratorServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/Config/pdf_generator.php', 'invoices'
+            __DIR__ . '/Config/pdf_generator.php', 'pdf_generator'
         );
     }
 }

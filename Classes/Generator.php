@@ -245,16 +245,27 @@ class Generator
     }
 
     /**
-     * add custom data to the array
+     * set custom data key and value
      *
      * @param array $data
      * @return self
      */
-    public function addCustomData(array $data)
+    public function addCustomData($key, $value)
     {
-        $this->custom_data->push($data);
+        $this->custom_data[$key] = $value;
 
         return $this;
+    }
+
+    /**
+     * get the custom data by the key
+     *
+     * @param string $key
+     * @return void
+     */
+    public function getCustomData($key)
+    {
+        return $this->custom_data[$key];
     }
 
     /**

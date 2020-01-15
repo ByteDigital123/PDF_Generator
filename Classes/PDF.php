@@ -10,10 +10,10 @@
 
 namespace Bytedigital123\PDFGenerator\Classes;
 
-use Bytedigital123\PDFGenerator\Classes\Generator;
-use Dompdf\Dompdf;
-use Dompdf\Options;
 use Illuminate\Support\Facades\View;
+use Dompdf\Options;
+use Dompdf\Dompdf;
+use Bytedigital123\PDFGenerator\Classes\Generator;
 
 /**
  * This is the PDF class.

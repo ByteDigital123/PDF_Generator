@@ -1,6 +1,6 @@
 <?php
 
-namespace ByteDigital\PDFGenerator;
+namespace ByteDigital123\PDFGenerator;
 
 use Illuminate\Support\ServiceProvider;
 

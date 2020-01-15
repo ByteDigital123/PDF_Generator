@@ -8,10 +8,10 @@
  * file that was distributed with this source code.
  */
 
-namespace ByteDigital\PDFGenerator\Traits;
+namespace ByteDigital123\PDFGenerator\Traits;
 
-use Illuminate\Support\Collection;
 use Carbon\Carbon;
+use Illuminate\Support\Collection;
 
 /**
  * This is the Setters trait.

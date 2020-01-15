@@ -6,19 +6,19 @@ composer require bytedigital123/pdf_generator
 
 Example Usage:
 
-# ByteDigital\PDFGenerator\PDFGeneratorServiceProvider
+# ByteDigital123\PDFGenerator\PDFGeneratorServiceProvider
 
 This is the PDFGeneratorServiceProvider class.
 
 - Class name: PDFGeneratorServiceProvider
-- Namespace: ByteDigital\PDFGenerator
+- Namespace: ByteDigital123\PDFGenerator
 - Parent class: Illuminate\Support\ServiceProvider
 
 ## Methods
 
 ### boot
 
-    void ByteDigital\PDFGenerator\PDFGeneratorServiceProvider::boot()
+    void ByteDigital123\PDFGenerator\PDFGeneratorServiceProvider::boot()
 
 Bootstrap any application services.
 
@@ -26,24 +26,24 @@ Bootstrap any application services.
 
 ### register
 
-    void ByteDigital\PDFGenerator\PDFGeneratorServiceProvider::register()
+    void ByteDigital123\PDFGenerator\PDFGeneratorServiceProvider::register()
 
 Register any application services.
 
 - Visibility: **public**
 
-# ByteDigital\PDFGenerator\Classes\PDF
+# ByteDigital123\PDFGenerator\Classes\PDF
 
 This is the PDF class.
 
 - Class name: PDF
-- Namespace: ByteDigital\PDFGenerator\Classes
+- Namespace: ByteDigital123\PDFGenerator\Classes
 
 ## Methods
 
 ### generate
 
-    \Dompdf\Dompdf\Dompdf ByteDigital\PDFGenerator\Classes\PDF::generate(\ByteDigital\PDFGenerator\Classes\ByteDigital\PDFGenerator\Classes\Invoice $invoice, string $template)
+    \Dompdf\Dompdf\Dompdf ByteDigital123\PDFGenerator\Classes\PDF::generate(\ByteDigital123\PDFGenerator\Classes\ByteDigital123\PDFGenerator\Classes\Invoice $invoice, string $template)
 
 Generate the PDF.
 
@@ -52,15 +52,15 @@ Generate the PDF.
 
 #### Arguments
 
-- \$invoice **ByteDigital\PDFGenerator\Classes\ByteDigital\PDFGenerator\Classes\Invoice**
+- \$invoice **ByteDigital123\PDFGenerator\Classes\ByteDigital123\PDFGenerator\Classes\Invoice**
 - \$template **string**
 
-# ByteDigital\PDFGenerator\Classes\Invoice
+# ByteDigital123\PDFGenerator\Classes\Invoice
 
 This is the Invoice class.
 
 - Class name: Invoice
-- Namespace: ByteDigital\PDFGenerator\Classes
+- Namespace: ByteDigital123\PDFGenerator\Classes
 
 ## Properties
 
@@ -82,7 +82,7 @@ Invoice template.
 
 ### \$items
 
-    public \ByteDigital\PDFGenerator\Classes\Illuminate\Support\Collection $items
+    public \ByteDigital123\PDFGenerator\Classes\Illuminate\Support\Collection $items
 
 Invoice item collection.
 
@@ -186,7 +186,7 @@ Invoice Footnote.
 
 ### \$pdf
 
-    private \ByteDigital\PDFGenerator\Classes\Dompdf\Dompdf $pdf
+    private \ByteDigital123\PDFGenerator\Classes\Dompdf\Dompdf $pdf
 
 Stores the PDF object.
 
@@ -196,7 +196,7 @@ Stores the PDF object.
 
 ### \_\_construct
 
-    mixed ByteDigital\PDFGenerator\Classes\Invoice::__construct(string $name)
+    mixed ByteDigital123\PDFGenerator\Classes\Invoice::__construct(string $name)
 
 Create a new invoice instance.
 
@@ -208,7 +208,7 @@ Create a new invoice instance.
 
 ### make
 
-    \ByteDigital\PDFGenerator\Classes\ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::make(string $name)
+    \ByteDigital123\PDFGenerator\Classes\ByteDigital123\PDFGenerator\Classes\Invoice ByteDigital123\PDFGenerator\Classes\Invoice::make(string $name)
 
 Return a new instance of Invoice.
 
@@ -221,7 +221,7 @@ Return a new instance of Invoice.
 
 ### template
 
-    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::template(string $template)
+    \ByteDigital123\PDFGenerator\Classes\Invoice ByteDigital123\PDFGenerator\Classes\Invoice::template(string $template)
 
 Select template for invoice.
 
@@ -234,7 +234,7 @@ Select template for invoice.
 
 ### addItem
 
-    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::addItem(string $name, integer $price, integer $ammount, string $id)
+    \ByteDigital123\PDFGenerator\Classes\Invoice ByteDigital123\PDFGenerator\Classes\Invoice::addItem(string $name, integer $price, integer $ammount, string $id)
 
 Adds an item to the invoice.
 
@@ -249,7 +249,7 @@ Adds an item to the invoice.
 
 ### popItem
 
-    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::popItem()
+    \ByteDigital123\PDFGenerator\Classes\Invoice ByteDigital123\PDFGenerator\Classes\Invoice::popItem()
 
 Pop the last invoice item.
 
@@ -257,7 +257,7 @@ Pop the last invoice item.
 
 ### formatCurrency
 
-    \ByteDigital\PDFGenerator\Classes\stdClass ByteDigital\PDFGenerator\Classes\Invoice::formatCurrency()
+    \ByteDigital123\PDFGenerator\Classes\stdClass ByteDigital123\PDFGenerator\Classes\Invoice::formatCurrency()
 
 Return the currency object.
 
@@ -265,7 +265,7 @@ Return the currency object.
 
 ### subTotalPrice
 
-    integer ByteDigital\PDFGenerator\Classes\Invoice::subTotalPrice()
+    integer ByteDigital123\PDFGenerator\Classes\Invoice::subTotalPrice()
 
 Return the subtotal invoice price.
 
@@ -273,7 +273,7 @@ Return the subtotal invoice price.
 
 ### totalPrice
 
-    integer ByteDigital\PDFGenerator\Classes\Invoice::totalPrice()
+    integer ByteDigital123\PDFGenerator\Classes\Invoice::totalPrice()
 
 Return the total invoce price after aplying the tax.
 
@@ -281,7 +281,7 @@ Return the total invoce price after aplying the tax.
 
 ### taxPrice
 
-    float ByteDigital\PDFGenerator\Classes\Invoice::taxPrice()
+    float ByteDigital123\PDFGenerator\Classes\Invoice::taxPrice()
 
 taxPrice.
 
@@ -289,7 +289,7 @@ taxPrice.
 
 ### generate
 
-    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::generate()
+    \ByteDigital123\PDFGenerator\Classes\Invoice ByteDigital123\PDFGenerator\Classes\Invoice::generate()
 
 Generate the PDF.
 
@@ -297,7 +297,7 @@ Generate the PDF.
 
 ### download
 
-    \ByteDigital\PDFGenerator\Classes\response ByteDigital\PDFGenerator\Classes\Invoice::download(string $name)
+    \ByteDigital123\PDFGenerator\Classes\response ByteDigital123\PDFGenerator\Classes\Invoice::download(string $name)
 
 Downloads the generated PDF.
 
@@ -309,7 +309,7 @@ Downloads the generated PDF.
 
 ### shouldDisplayImageColumn
 
-    \ByteDigital\PDFGenerator\Classes\response ByteDigital\PDFGenerator\Classes\Invoice::shouldDisplayImageColumn()
+    \ByteDigital123\PDFGenerator\Classes\response ByteDigital123\PDFGenerator\Classes\Invoice::shouldDisplayImageColumn()
 
 Return true/false if one item contains image.
 Determine if we should display or not the image column on the invoice.
@@ -318,7 +318,7 @@ Determine if we should display or not the image column on the invoice.
 
 ### show
 
-    \ByteDigital\PDFGenerator\Classes\response ByteDigital\PDFGenerator\Classes\Invoice::show(string $name)
+    \ByteDigital123\PDFGenerator\Classes\response ByteDigital123\PDFGenerator\Classes\Invoice::show(string $name)
 
 Show the PDF in the browser.
 
@@ -330,7 +330,7 @@ Show the PDF in the browser.
 
 ### name
 
-    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::name(string $name)
+    \ByteDigital123\PDFGenerator\Classes\Invoice ByteDigital123\PDFGenerator\Classes\Invoice::name(string $name)
 
 Set the invoice name.
 
@@ -342,7 +342,7 @@ Set the invoice name.
 
 ### number
 
-    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::number(integer $number)
+    \ByteDigital123\PDFGenerator\Classes\Invoice ByteDigital123\PDFGenerator\Classes\Invoice::number(integer $number)
 
 Set the invoice number.
 
@@ -354,7 +354,7 @@ Set the invoice number.
 
 ### decimals
 
-    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::decimals(integer $decimals)
+    \ByteDigital123\PDFGenerator\Classes\Invoice ByteDigital123\PDFGenerator\Classes\Invoice::decimals(integer $decimals)
 
 Set the invoice decimal precision.
 
@@ -366,7 +366,7 @@ Set the invoice decimal precision.
 
 ### tax
 
-    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::tax(float $tax)
+    \ByteDigital123\PDFGenerator\Classes\Invoice ByteDigital123\PDFGenerator\Classes\Invoice::tax(float $tax)
 
 Set the invoice tax.
 
@@ -378,7 +378,7 @@ Set the invoice tax.
 
 ### taxType
 
-    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::taxType(string $tax_type)
+    \ByteDigital123\PDFGenerator\Classes\Invoice ByteDigital123\PDFGenerator\Classes\Invoice::taxType(string $tax_type)
 
 Set the invoice tax type.
 
@@ -390,7 +390,7 @@ Set the invoice tax type.
 
 ### logo
 
-    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::logo(string $logo_url)
+    \ByteDigital123\PDFGenerator\Classes\Invoice ByteDigital123\PDFGenerator\Classes\Invoice::logo(string $logo_url)
 
 Set the invoice logo URL.
 
@@ -402,7 +402,7 @@ Set the invoice logo URL.
 
 ### date
 
-    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::date(\Carbon\Carbon $date)
+    \ByteDigital123\PDFGenerator\Classes\Invoice ByteDigital123\PDFGenerator\Classes\Invoice::date(\Carbon\Carbon $date)
 
 Set the invoice date.
 
@@ -414,7 +414,7 @@ Set the invoice date.
 
 ### notes
 
-    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::notes(string $notes)
+    \ByteDigital123\PDFGenerator\Classes\Invoice ByteDigital123\PDFGenerator\Classes\Invoice::notes(string $notes)
 
 Set the invoice notes.
 
@@ -426,7 +426,7 @@ Set the invoice notes.
 
 ### business
 
-    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::business(array $details)
+    \ByteDigital123\PDFGenerator\Classes\Invoice ByteDigital123\PDFGenerator\Classes\Invoice::business(array $details)
 
 Set the invoice business details.
 
@@ -438,7 +438,7 @@ Set the invoice business details.
 
 ### customer
 
-    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::customer(array $details)
+    \ByteDigital123\PDFGenerator\Classes\Invoice ByteDigital123\PDFGenerator\Classes\Invoice::customer(array $details)
 
 Set the invoice customer details.
 
@@ -450,7 +450,7 @@ Set the invoice customer details.
 
 ### footnote
 
-    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::footnote(string $footnote)
+    \ByteDigital123\PDFGenerator\Classes\Invoice ByteDigital123\PDFGenerator\Classes\Invoice::footnote(string $footnote)
 
 Set the invoice footnote.
 
@@ -462,7 +462,7 @@ Set the invoice footnote.
 
 ### due_date
 
-    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::due_date(Carbon $due_date)
+    \ByteDigital123\PDFGenerator\Classes\Invoice ByteDigital123\PDFGenerator\Classes\Invoice::due_date(Carbon $due_date)
 
 Set the invoice due date.
 
@@ -480,7 +480,7 @@ Array of tax rates for PDFGenerator.
 
 ### with_pagination
 
-    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::with_pagination(boolean $with_pagination)
+    \ByteDigital123\PDFGenerator\Classes\Invoice ByteDigital123\PDFGenerator\Classes\Invoice::with_pagination(boolean $with_pagination)
 
 If true and page count are higher than 1, pagination will show at the bottom.
 
@@ -492,7 +492,7 @@ If true and page count are higher than 1, pagination will show at the bottom.
 
 ### with_pagination
 
-    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::duplicate_header(boolean $duplicate_header)
+    \ByteDigital123\PDFGenerator\Classes\Invoice ByteDigital123\PDFGenerator\Classes\Invoice::duplicate_header(boolean $duplicate_header)
 
 If true header will be duplicated on each page.
 

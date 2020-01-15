@@ -8,13 +8,13 @@
  * file that was distributed with this source code.
  */
 
-namespace ByteDigital\PDFGenerator\Classes;
+namespace ByteDigital123\PDFGenerator\Classes;
 
-use Storage;
-use Illuminate\Support\Collection;
+use ByteDigital123\PDFGenerator\Classes\PDF;
+use ByteDigital123\PDFGenerator\Traits\Setters;
 use Carbon\Carbon;
-use ByteDigital\PDFGenerator\Traits\Setters;
-use ByteDigital\PDFGenerator\Classes\PDF;
+use Illuminate\Support\Collection;
+use Storage;
 
 /**
  * This is the Invoice class.

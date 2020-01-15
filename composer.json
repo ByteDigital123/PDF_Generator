@@ -27,13 +27,13 @@
   ],
   "autoload": {
     "psr-4": {
-      "ByteDigital\\PDFGenerator\\": "."
+      "ByteDigital123\\PDFGenerator\\": "."
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "ByteDigital\\PDFGenerator\\PDFGeneratorServiceProvider"
+        "ByteDigital123\\PDFGenerator\\PDFGeneratorServiceProvider"
       ]
     }
   },

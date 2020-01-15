@@ -2,7 +2,7 @@
 /**
  * This file is part of ByteDigital123/invoices.
  *
- * (c) Erik Campobadal <soc@erik.cat>
+ * (c) Chris Mills <chris@byte-digital.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -10,10 +10,10 @@
 
 namespace ByteDigital\PDFGenerator\Classes;
 
-use Storage;
-use Illuminate\Support\Collection;
-use Carbon\Carbon;
 use ByteDigital\PDFGenerator\Traits\Setters;
+use Carbon\Carbon;
+use Illuminate\Support\Collection;
+use Storage;
 
 /**
  * This is the Invoice class.

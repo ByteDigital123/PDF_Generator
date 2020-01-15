@@ -2,7 +2,7 @@
 /**
  * This file is part of consoletvs/invoices.
  *
- * (c) Erik Campobadal <soc@erik.cat>
+ * (c) Chris Mills <chris@byte-digital.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -15,7 +15,7 @@ use Illuminate\Support\ServiceProvider;
 /**
  * This is the InvoicesServiceProvider class.
  *
- * @author Erik Campobadal <soc@erik.cat>
+ * @author Chris Mills <chris@byte-digital.com>
  */
 class PDFGeneratorServiceProvider extends ServiceProvider
 {

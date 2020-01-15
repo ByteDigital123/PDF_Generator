@@ -1,53 +1,24 @@
 ## Installation
 
 ```
-composer require bytedigital123/pdfgenerator
+composer require bytedigital123/pdf_generator
 ```
 
 Example Usage:
 
-```php
-$invoice = \ConsoleTVs\Invoices\Classes\Invoice::make()
-                ->addItem('Test Item', 10.25, 2, 1412)
-                ->addItem('Test Item 2', 5, 2, 923)
-                ->addItem('Test Item 3', 15.55, 5, 42)
-                ->addItem('Test Item 4', 1.25, 1, 923)
-                ->addItem('Test Item 5', 3.12, 1, 3142)
-                ->addItem('Test Item 6', 6.41, 3, 452)
-                ->addItem('Test Item 7', 2.86, 1, 1526)
-                ->addItem('Test Item 8', 5, 2, 923, 'https://dummyimage.com/64x64/000/fff')
-                ->number(4021)
-                ->with_pagination(true)
-                ->duplicate_header(true)
-                ->due_date(Carbon::now()->addMonths(1))
-                ->notes('Lrem ipsum dolor sit amet, consectetur adipiscing elit.')
-                ->customer([
-                    'name'      => 'Èrik Campobadal Forés',
-                    'id'        => '12345678A',
-                    'phone'     => '+34 123 456 789',
-                    'location'  => 'C / Unknown Street 1st',
-                    'zip'       => '08241',
-                    'city'      => 'Manresa',
-                    'country'   => 'Spain',
-                ])
-                ->download('demo');
-```
+# ByteDigital\PDFGenerator\PDFGeneratorServiceProvider
 
-![Sample Invoice](https://camo.githubusercontent.com/a179f76efacbe1db1d6e06a36878558f90070697/68747470733a2f2f692e6779617a6f2e636f6d2f37363866356235393739313136326534333266396364666131356630313762632e706e67)
+This is the PDFGeneratorServiceProvider class.
 
-# ConsoleTVs\Invoices\InvoicesServiceProvider
-
-This is the InvoicesServiceProvider class.
-
-- Class name: InvoicesServiceProvider
-- Namespace: ConsoleTVs\Invoices
+- Class name: PDFGeneratorServiceProvider
+- Namespace: ByteDigital\PDFGenerator
 - Parent class: Illuminate\Support\ServiceProvider
 
 ## Methods
 
 ### boot
 
-    void ConsoleTVs\Invoices\InvoicesServiceProvider::boot()
+    void ByteDigital\PDFGenerator\PDFGeneratorServiceProvider::boot()
 
 Bootstrap any application services.
 
@@ -55,24 +26,24 @@ Bootstrap any application services.
 
 ### register
 
-    void ConsoleTVs\Invoices\InvoicesServiceProvider::register()
+    void ByteDigital\PDFGenerator\PDFGeneratorServiceProvider::register()
 
 Register any application services.
 
 - Visibility: **public**
 
-# ConsoleTVs\Invoices\Classes\PDF
+# ByteDigital\PDFGenerator\Classes\PDF
 
 This is the PDF class.
 
 - Class name: PDF
-- Namespace: ConsoleTVs\Invoices\Classes
+- Namespace: ByteDigital\PDFGenerator\Classes
 
 ## Methods
 
 ### generate
 
-    \Dompdf\Dompdf\Dompdf ConsoleTVs\Invoices\Classes\PDF::generate(\ConsoleTVs\Invoices\Classes\ConsoleTVs\Invoices\Classes\Invoice $invoice, string $template)
+    \Dompdf\Dompdf\Dompdf ByteDigital\PDFGenerator\Classes\PDF::generate(\ByteDigital\PDFGenerator\Classes\ByteDigital\PDFGenerator\Classes\Invoice $invoice, string $template)
 
 Generate the PDF.
 
@@ -81,15 +52,15 @@ Generate the PDF.
 
 #### Arguments
 
-- \$invoice **ConsoleTVs\Invoices\Classes\ConsoleTVs\Invoices\Classes\Invoice**
+- \$invoice **ByteDigital\PDFGenerator\Classes\ByteDigital\PDFGenerator\Classes\Invoice**
 - \$template **string**
 
-# ConsoleTVs\Invoices\Classes\Invoice
+# ByteDigital\PDFGenerator\Classes\Invoice
 
 This is the Invoice class.
 
 - Class name: Invoice
-- Namespace: ConsoleTVs\Invoices\Classes
+- Namespace: ByteDigital\PDFGenerator\Classes
 
 ## Properties
 
@@ -111,7 +82,7 @@ Invoice template.
 
 ### \$items
 
-    public \ConsoleTVs\Invoices\Classes\Illuminate\Support\Collection $items
+    public \ByteDigital\PDFGenerator\Classes\Illuminate\Support\Collection $items
 
 Invoice item collection.
 
@@ -215,7 +186,7 @@ Invoice Footnote.
 
 ### \$pdf
 
-    private \ConsoleTVs\Invoices\Classes\Dompdf\Dompdf $pdf
+    private \ByteDigital\PDFGenerator\Classes\Dompdf\Dompdf $pdf
 
 Stores the PDF object.
 
@@ -225,7 +196,7 @@ Stores the PDF object.
 
 ### \_\_construct
 
-    mixed ConsoleTVs\Invoices\Classes\Invoice::__construct(string $name)
+    mixed ByteDigital\PDFGenerator\Classes\Invoice::__construct(string $name)
 
 Create a new invoice instance.
 
@@ -237,7 +208,7 @@ Create a new invoice instance.
 
 ### make
 
-    \ConsoleTVs\Invoices\Classes\ConsoleTVs\Invoices\Classes\Invoice ConsoleTVs\Invoices\Classes\Invoice::make(string $name)
+    \ByteDigital\PDFGenerator\Classes\ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::make(string $name)
 
 Return a new instance of Invoice.
 
@@ -250,7 +221,7 @@ Return a new instance of Invoice.
 
 ### template
 
-    \ConsoleTVs\Invoices\Classes\Invoice ConsoleTVs\Invoices\Classes\Invoice::template(string $template)
+    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::template(string $template)
 
 Select template for invoice.
 
@@ -263,7 +234,7 @@ Select template for invoice.
 
 ### addItem
 
-    \ConsoleTVs\Invoices\Classes\Invoice ConsoleTVs\Invoices\Classes\Invoice::addItem(string $name, integer $price, integer $ammount, string $id)
+    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::addItem(string $name, integer $price, integer $ammount, string $id)
 
 Adds an item to the invoice.
 
@@ -278,7 +249,7 @@ Adds an item to the invoice.
 
 ### popItem
 
-    \ConsoleTVs\Invoices\Classes\Invoice ConsoleTVs\Invoices\Classes\Invoice::popItem()
+    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::popItem()
 
 Pop the last invoice item.
 
@@ -286,7 +257,7 @@ Pop the last invoice item.
 
 ### formatCurrency
 
-    \ConsoleTVs\Invoices\Classes\stdClass ConsoleTVs\Invoices\Classes\Invoice::formatCurrency()
+    \ByteDigital\PDFGenerator\Classes\stdClass ByteDigital\PDFGenerator\Classes\Invoice::formatCurrency()
 
 Return the currency object.
 
@@ -294,7 +265,7 @@ Return the currency object.
 
 ### subTotalPrice
 
-    integer ConsoleTVs\Invoices\Classes\Invoice::subTotalPrice()
+    integer ByteDigital\PDFGenerator\Classes\Invoice::subTotalPrice()
 
 Return the subtotal invoice price.
 
@@ -302,7 +273,7 @@ Return the subtotal invoice price.
 
 ### totalPrice
 
-    integer ConsoleTVs\Invoices\Classes\Invoice::totalPrice()
+    integer ByteDigital\PDFGenerator\Classes\Invoice::totalPrice()
 
 Return the total invoce price after aplying the tax.
 
@@ -310,7 +281,7 @@ Return the total invoce price after aplying the tax.
 
 ### taxPrice
 
-    float ConsoleTVs\Invoices\Classes\Invoice::taxPrice()
+    float ByteDigital\PDFGenerator\Classes\Invoice::taxPrice()
 
 taxPrice.
 
@@ -318,7 +289,7 @@ taxPrice.
 
 ### generate
 
-    \ConsoleTVs\Invoices\Classes\Invoice ConsoleTVs\Invoices\Classes\Invoice::generate()
+    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::generate()
 
 Generate the PDF.
 
@@ -326,7 +297,7 @@ Generate the PDF.
 
 ### download
 
-    \ConsoleTVs\Invoices\Classes\response ConsoleTVs\Invoices\Classes\Invoice::download(string $name)
+    \ByteDigital\PDFGenerator\Classes\response ByteDigital\PDFGenerator\Classes\Invoice::download(string $name)
 
 Downloads the generated PDF.
 
@@ -338,7 +309,7 @@ Downloads the generated PDF.
 
 ### shouldDisplayImageColumn
 
-    \ConsoleTVs\Invoices\Classes\response ConsoleTVs\Invoices\Classes\Invoice::shouldDisplayImageColumn()
+    \ByteDigital\PDFGenerator\Classes\response ByteDigital\PDFGenerator\Classes\Invoice::shouldDisplayImageColumn()
 
 Return true/false if one item contains image.
 Determine if we should display or not the image column on the invoice.
@@ -347,7 +318,7 @@ Determine if we should display or not the image column on the invoice.
 
 ### show
 
-    \ConsoleTVs\Invoices\Classes\response ConsoleTVs\Invoices\Classes\Invoice::show(string $name)
+    \ByteDigital\PDFGenerator\Classes\response ByteDigital\PDFGenerator\Classes\Invoice::show(string $name)
 
 Show the PDF in the browser.
 
@@ -359,7 +330,7 @@ Show the PDF in the browser.
 
 ### name
 
-    \ConsoleTVs\Invoices\Classes\Invoice ConsoleTVs\Invoices\Classes\Invoice::name(string $name)
+    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::name(string $name)
 
 Set the invoice name.
 
@@ -371,7 +342,7 @@ Set the invoice name.
 
 ### number
 
-    \ConsoleTVs\Invoices\Classes\Invoice ConsoleTVs\Invoices\Classes\Invoice::number(integer $number)
+    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::number(integer $number)
 
 Set the invoice number.
 
@@ -383,7 +354,7 @@ Set the invoice number.
 
 ### decimals
 
-    \ConsoleTVs\Invoices\Classes\Invoice ConsoleTVs\Invoices\Classes\Invoice::decimals(integer $decimals)
+    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::decimals(integer $decimals)
 
 Set the invoice decimal precision.
 
@@ -395,7 +366,7 @@ Set the invoice decimal precision.
 
 ### tax
 
-    \ConsoleTVs\Invoices\Classes\Invoice ConsoleTVs\Invoices\Classes\Invoice::tax(float $tax)
+    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::tax(float $tax)
 
 Set the invoice tax.
 
@@ -407,7 +378,7 @@ Set the invoice tax.
 
 ### taxType
 
-    \ConsoleTVs\Invoices\Classes\Invoice ConsoleTVs\Invoices\Classes\Invoice::taxType(string $tax_type)
+    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::taxType(string $tax_type)
 
 Set the invoice tax type.
 
@@ -419,7 +390,7 @@ Set the invoice tax type.
 
 ### logo
 
-    \ConsoleTVs\Invoices\Classes\Invoice ConsoleTVs\Invoices\Classes\Invoice::logo(string $logo_url)
+    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::logo(string $logo_url)
 
 Set the invoice logo URL.
 
@@ -431,7 +402,7 @@ Set the invoice logo URL.
 
 ### date
 
-    \ConsoleTVs\Invoices\Classes\Invoice ConsoleTVs\Invoices\Classes\Invoice::date(\Carbon\Carbon $date)
+    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::date(\Carbon\Carbon $date)
 
 Set the invoice date.
 
@@ -443,7 +414,7 @@ Set the invoice date.
 
 ### notes
 
-    \ConsoleTVs\Invoices\Classes\Invoice ConsoleTVs\Invoices\Classes\Invoice::notes(string $notes)
+    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::notes(string $notes)
 
 Set the invoice notes.
 
@@ -455,7 +426,7 @@ Set the invoice notes.
 
 ### business
 
-    \ConsoleTVs\Invoices\Classes\Invoice ConsoleTVs\Invoices\Classes\Invoice::business(array $details)
+    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::business(array $details)
 
 Set the invoice business details.
 
@@ -467,7 +438,7 @@ Set the invoice business details.
 
 ### customer
 
-    \ConsoleTVs\Invoices\Classes\Invoice ConsoleTVs\Invoices\Classes\Invoice::customer(array $details)
+    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::customer(array $details)
 
 Set the invoice customer details.
 
@@ -479,7 +450,7 @@ Set the invoice customer details.
 
 ### footnote
 
-    \ConsoleTVs\Invoices\Classes\Invoice ConsoleTVs\Invoices\Classes\Invoice::footnote(string $footnote)
+    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::footnote(string $footnote)
 
 Set the invoice footnote.
 
@@ -491,7 +462,7 @@ Set the invoice footnote.
 
 ### due_date
 
-    \ConsoleTVs\Invoices\Classes\Invoice ConsoleTVs\Invoices\Classes\Invoice::due_date(Carbon $due_date)
+    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::due_date(Carbon $due_date)
 
 Set the invoice due date.
 
@@ -503,13 +474,13 @@ Set the invoice due date.
 
 ### tax_rates
 
-Array of tax rates for invoices.
+Array of tax rates for PDFGenerator.
 
 - Visibility: **public**
 
 ### with_pagination
 
-    \ConsoleTVs\Invoices\Classes\Invoice ConsoleTVs\Invoices\Classes\Invoice::with_pagination(boolean $with_pagination)
+    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::with_pagination(boolean $with_pagination)
 
 If true and page count are higher than 1, pagination will show at the bottom.
 
@@ -521,7 +492,7 @@ If true and page count are higher than 1, pagination will show at the bottom.
 
 ### with_pagination
 
-    \ConsoleTVs\Invoices\Classes\Invoice ConsoleTVs\Invoices\Classes\Invoice::duplicate_header(boolean $duplicate_header)
+    \ByteDigital\PDFGenerator\Classes\Invoice ByteDigital\PDFGenerator\Classes\Invoice::duplicate_header(boolean $duplicate_header)
 
 If true header will be duplicated on each page.
 

@@ -224,11 +224,4 @@ trait Setters
         $this->duplicate_header = $duplicate_header;
         return $this;
     }
-
-    public function custom_data($custom_data)
-    {
-        $this->custom_data = $custom_data;
-        return $this;
-    }
-
 }

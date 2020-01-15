@@ -21,7 +21,7 @@ class PDFGeneratorServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/Templates', 'pdf_views');
 
         $this->publishes([
-            __DIR__ . '/Templates' => resource_path('views/vendor/pdf_views'),
+            __DIR__ . '/Templates' => resource_path('views/vendor/pdf_generator'),
             __DIR__ . '/Config/pdf_generator.php' => config_path('pdf_generator.php'),
         ], 'pdf_generator');
     }

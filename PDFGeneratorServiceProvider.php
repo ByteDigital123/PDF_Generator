@@ -18,7 +18,7 @@ class PDFGeneratorServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/Templates', 'pdf_views');
+        $this->loadViewsFrom(__DIR__ . '/Templates', 'pdf_generator');
 
         $this->publishes([
             __DIR__ . '/Templates' => resource_path('views/vendor/pdf_generator'),

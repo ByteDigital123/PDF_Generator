@@ -229,12 +229,13 @@ class Generator
      *
      * @return self
      */
-    public function addItem($name, $price, $amount = 1, $id = '-', $imageUrl = null)
+    public function addItem($name, $price, $amount = 1, $id = '-', $sku = '', $imageUrl = null)
     {
         $this->items->push(Collection::make([
             'name' => $name,
             'price' => $price,
-            'ammount' => $ammount,
+            'amount' => $amount,
+            'sku' => $sku,
             'totalPrice' => number_format(bcmul($price, $amount, $this->decimals), $this->decimals),
             'id' => $id,
             'imageUrl' => $imageUrl,

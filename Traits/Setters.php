@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace ByteDigital123\PDFGenerator\Traits;
+namespace Bytedigital123\PDFGenerator\Traits;
 
 use Carbon\Carbon;
 use Illuminate\Support\Collection;

@@ -8,9 +8,9 @@
  * file that was distributed with this source code.
  */
 
-namespace ByteDigital123\PDFGenerator\Classes;
+namespace Bytedigital123\PDFGenerator\Classes;
 
-use ByteDigital123\PDFGenerator\Classes\Generator;
+use Bytedigital123\PDFGenerator\Classes\Generator;
 use Dompdf\Dompdf;
 use Dompdf\Options;
 use Illuminate\Support\Facades\View;
@@ -27,7 +27,7 @@ class PDF
      *
      * @method generate
      *
-     * @param ByteDigital123\PDFGenerator\Classes\Generator $invoice
+     * @param Bytedigital123\PDFGenerator\Classes\Generator $invoice
      * @param string $template
      *
      * @return Dompdf\Dompdf

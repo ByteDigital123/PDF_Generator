@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of ByteDigital123/invoices.
+ * This file is part of Bytedigital123/invoices.
  *
  * (c) Chris Mills <chris@byte-digital.com>
  *
@@ -8,10 +8,10 @@
  * file that was distributed with this source code.
  */
 
-namespace ByteDigital123\PDFGenerator\Classes;
+namespace Bytedigital123\PDFGenerator\Classes;
 
-use ByteDigital123\PDFGenerator\Classes\PDF;
-use ByteDigital123\PDFGenerator\Traits\Setters;
+use Bytedigital123\PDFGenerator\Classes\PDF;
+use Bytedigital123\PDFGenerator\Traits\Setters;
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
 use Storage;
@@ -193,7 +193,7 @@ class Generator
      *
      * @param string $name
      *
-     * @return ByteDigital123\PDFGenerator\Classes\Invoice
+     * @return Bytedigital123\PDFGenerator\Classes\Invoice
      */
     public static function make($name = 'Invoice')
     {
